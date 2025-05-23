@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Programación | Radio Península</title>
+  <style>
+    body {
+      background-color: white;
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+
+    .programacion-title {
+      font-size: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 16px;
+      font-weight: bold;
+    }
+
+    .programacion-title img {
+      width: 28px;
+      height: 28px;
+      margin-right: 10px;
+    }
+
+    .programacion-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 14px;
+    }
+
+    .programacion-table th, .programacion-table td {
+      border: 1px solid #ddd;
+      padding: 6px 8px;
+      text-align: left;
+    }
+
+    .programacion-table th {
+      background-color: #e8f0fe;
+      font-size: 13px;
+    }
+
+    .programacion-table tbody tr:nth-child(odd) {
+      background-color: #f9f9f9;
+    }
+
+    .programacion-table tbody tr:nth-child(even) {
+      background-color: #f1f5f9;
+    }
+
+    .programacion-table tbody tr:hover {
+      background-color: #dceefb;
+    }
+
+    .programacion-table a {
+      color: #333333;
+      text-decoration: none;
+      transition: color 0.3s, background-color 0.3s;
+      display: inline-block;
+      padding: 4px 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      background-color: #f9f9f9;
+      font-size: 12px;
+      white-space: nowrap;
+    }
+
+    .programacion-table a:hover {
+      color: #990000;
+      background-color: #ffe6e6;
+      border-color: #990000;
+    }
+
+    .programacion-table td:first-child {
+      font-size: 12px;
+      white-space: nowrap;
+      color: #333333;
+    }
+
+    .programacion-table td:nth-child(2) {
+      color: #333333;
+    }
+
+    .en-vivo {
+      color: red;
+      font-weight: bold;
+      margin-left: 6px;
+    }
+  </style>
+</head>
+<body>
+  <h3 class="programacion-title">
+    <img src="https://radiopeninsula.com/wp-content/uploads/2025/05/ico-bocina.png" alt="bocina" />
+    Horario de Programación
+  </h3>
+
+  <table class="programacion-table" id="tabla-programacion">
+    <thead>
+      <tr>
+        <th>Hora</th>
+        <th>Programa</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr data-inicio="08:00" data-fin="09:30"><td>8:00 AM a 9:30 AM</td><td><a href="#">Típicos Variados</a></td></tr>
+      <tr data-inicio="09:30" data-fin="10:00"><td>9:30 AM a 10:00 AM</td><td><a href="#">Típicos (Vladimir Atencio)</a></td></tr>
+      <tr data-inicio="10:00" data-fin="10:30"><td>10:00 AM a 10:30 AM</td><td><a href="#">Típicos (Nenito Vargas)</a></td></tr>
+      <tr data-inicio="10:30" data-fin="11:00"><td>10:30 AM a 11:00 AM</td><td><a href="#">Café 93.9</a></td></tr>
+      <tr data-inicio="11:00" data-fin="11:30"><td>11:00 AM a 11:30 AM</td><td><a href="#">Típicos Variados</a></td></tr>
+      <tr data-inicio="11:30" data-fin="11:45"><td>11:30 AM a 11:45 AM</td><td><a href="#">Tres Patines</a></td></tr>
+      <tr data-inicio="11:45" data-fin="12:00"><td>11:45 AM a 12:00 PM</td><td><a href="#">Juan José Naturista</a></td></tr>
+      <tr data-inicio="12:00" data-fin="13:30"><td>12:00 PM a 1:30 PM</td><td><a href="#">Sangre Interiorana</a></td></tr>
+      <tr data-inicio="13:30" data-fin="14:00"><td>1:30 PM a 2:00 PM</td><td><a href="#">Típicos (Minguio Saez)</a></td></tr>
+      <tr data-inicio="14:00" data-fin="14:30"><td>2:00 PM a 2:30 PM</td><td><a href="#">Típicos (Edwin Martínez)</a></td></tr>
+      <tr data-inicio="14:30" data-fin="15:00"><td>2:30 PM a 3:00 PM</td><td><a href="#">Típicos (Dorindo Cardenas)</a></td></tr>
+      <tr data-inicio="15:00" data-fin="16:00"><td>3:00 PM a 4:00 PM</td><td><a href="#">Típicos Variados</a></td></tr>
+      <tr data-inicio="16:00" data-fin="17:00"><td>4:00 PM a 5:00 PM</td><td><a href="#">Cantares De Mi Campiña</a></td></tr>
+      <tr data-inicio="17:00" data-fin="18:00"><td>5:00 PM a 6:00 PM</td><td><a href="#">Sangre Interiorana</a></td></tr>
+      <tr data-inicio="18:00" data-fin="19:00"><td>6:00 PM a 7:00 PM</td><td><a href="#">Típicos Variados</a></td></tr>
+      <tr data-inicio="19:00" data-fin="19:30"><td>7:00 PM a 7:30 PM</td><td><a href="#">Así Canta La Montaña</a></td></tr>
+      <tr data-inicio="19:30" data-fin="20:30"><td>7:30 PM a 8:30 PM</td><td><a href="#">Típicos Variados</a></td></tr>
+      <tr data-inicio="20:30" data-fin="21:30"><td>8:30 PM a 9:30 PM</td><td><a href="#">Las Voces De Nuestro Folklor</a></td></tr>
+      <tr data-inicio="21:30" data-fin="08:00"><td>9:30 PM a 8:00 AM</td><td><a href="#">Enlace KwContinente</a></td></tr>
+    </tbody>
+  </table>
+
+  <script>
+    function marcarEnVivo() {
+      const ahora = new Date();
+      const minutosAhora = ahora.getHours() * 60 + ahora.getMinutes();
+      const filas = document.querySelectorAll("#tabla-programacion tbody tr");
+
+      filas.forEach((fila) => {
+        const inicioStr = fila.dataset.inicio;
+        const finStr = fila.dataset.fin;
+
+        const [hi, mi] = inicioStr.split(":");
+        const [hf, mf] = finStr.split(":");
+
+        let inicioMin = parseInt(hi) * 60 + parseInt(mi);
+        let finMin = parseInt(hf) * 60 + parseInt(mf);
+
+        // Ajustar si cruza medianoche
+        if (finMin < inicioMin) finMin += 1440;
+
+        let ahoraMin = minutosAhora;
+        if (ahoraMin < inicioMin) ahoraMin += 1440;
+
+        const celdaPrograma = fila.children[1];
+
+        if (inicioMin <= ahoraMin && ahoraMin < finMin) {
+          celdaPrograma.innerHTML += '<span class="en-vivo">🔴 En Vivo Ahora</span>';
+        }
+      });
+    }
+
+    marcarEnVivo();
+  </script>
+</body>
+</html>
